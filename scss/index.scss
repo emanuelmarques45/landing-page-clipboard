@@ -1,0 +1,352 @@
+@import "./variables.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.125rem;
+  background: url(./images/bg-header-desktop.png) top center no-repeat;
+
+  img {
+    max-width: 100%;
+    user-select: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  button {
+    user-select: none;
+    cursor: pointer;
+  }
+}
+
+main {
+  text-align: center;
+  max-width: 90%;
+
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 1rem;
+    color: $color-dark-grayish-blue;
+  }
+
+  p {
+    color: $color-grayish-blue;
+    line-height: 1.6;
+  }
+
+  .clipboard-download-top,
+  .tools,
+  .clipboard-download-bottom {
+    margin: 8rem 0;
+
+    p {
+      max-width: 55%;
+      margin: 0 auto;
+    }
+  }
+
+  .clipboard-download-top {
+    .logo-top {
+      width: 6rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .advantages {
+    display: grid;
+    place-items: center;
+    column-gap: 4rem;
+    row-gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+
+    .keep-track {
+      grid-column: span 2;
+
+      p {
+        max-width: 55%;
+        margin: 0 auto;
+      }
+    }
+
+    .list-advantages {
+      margin-bottom: 5rem;
+      text-align: left;
+
+      li:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+
+      li h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      li p {
+        line-height: 2;
+        max-width: 65%;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .tools {
+    .access-clipboard {
+      margin-bottom: 4rem;
+    }
+
+    img.devices {
+      width: min(50rem, 90vw);
+    }
+
+    .list-tools {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: baseline;
+      margin: 4rem auto;
+
+      li {
+        img {
+          margin-bottom: 2rem;
+        }
+
+        p {
+          line-height: 2;
+          font-size: 0.9rem;
+          max-width: 85%;
+        }
+      }
+    }
+  }
+
+  .list-partnership {
+    width: 100%;
+    display: grid;
+    row-gap: 5rem;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .container-buttons {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      padding: 0.8rem 2rem;
+      border-radius: 2rem;
+      border-bottom: 3px solid transparent;
+      color: $color-white;
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      box-shadow: 1px 1px 15px $color-grayish-blue;
+      transition: background-color 0.5s, box-shadow 0.8s;
+
+      &:hover {
+        box-shadow: 1px 1px 3px $color-grayish-blue;
+      }
+    }
+
+    .btn-download-ios {
+      margin-right: 1rem;
+      border-bottom-color: darken($color: $color-light-blue, $amount: 5);
+      @include hover-background($color-light-blue);
+    }
+
+    .btn-download-mac {
+      border-bottom-color: darken($color: $color-grayish-blue, $amount: 5);
+      @include hover-background($color-grayish-blue);
+    }
+  }
+}
+
+footer {
+  position: relative;
+  padding: 4rem 0;
+  width: 100%;
+  background-color: lighten($color: $color-strong-cyan, $amount: 45);
+
+  nav {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer-left {
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .logo-footer {
+        width: min(3.5rem, 13vw);
+      }
+
+      .footer__navigation {
+        margin: 0 auto 0 5rem;
+        width: 70%;
+        display: grid;
+        column-gap: 2rem;
+        row-gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+        .navigation__link {
+          cursor: pointer;
+          color: $color-dark-grayish-blue;
+          transition: color 0.2s;
+
+          &:hover {
+            color: $color-strong-cyan;
+          }
+        }
+      }
+    }
+
+    .social-media {
+      width: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .social-media__link {
+        display: block;
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      .social-media__link.facebook {
+        @include hover-image(
+          url(./images/icon-facebook.svg),
+          url(./images/icon-facebook-hover.svg)
+        );
+      }
+
+      .social-media__link.twitter {
+        @include hover-image(
+          url(./images/icon-twitter.svg),
+          url(./images/icon-twitter-hover.svg)
+        );
+        width: 1.9rem;
+      }
+
+      .social-media__link.instagram {
+        @include hover-image(
+          url(./images/icon-instagram.svg),
+          url(./images/icon-instagram-hover.svg)
+        );
+      }
+    }
+  }
+
+  p.attribution {
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1124px) {
+  main {
+    .list-partnership {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    .clipboard-download-top,
+    .tools,
+    .clipboard-download-bottom {
+      p {
+        max-width: 100%;
+      }
+    }
+
+    .advantages {
+      grid-template-columns: 1fr;
+
+      .keep-track {
+        grid-column: span 1;
+
+        p {
+          max-width: 100%;
+        }
+      }
+
+      .list-advantages {
+        margin-bottom: 0;
+        text-align: center;
+
+        li p {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .tools {
+      .list-tools {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+      }
+    }
+  }
+
+  footer {
+    nav {
+      padding: 1rem 0;
+      flex-direction: column;
+
+      .footer-left {
+        flex-direction: column;
+
+        .footer__navigation {
+          width: 80%;
+          margin: 3rem auto;
+
+          .navigation__link {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  main {
+    .container-buttons {
+      flex-direction: column;
+
+      button {
+        width: 100%;
+        padding: 1rem 2rem;
+      }
+
+      .btn-download-ios {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+$color-black: rgb(0, 0, 0);
+$color-strong-cyan: rgb(38, 186, 164);
+$color-light-blue: rgb(97, 115, 255);
+$color-dark-grayish-blue: rgb(76, 84, 93);
+$color-grayish-blue: rgb(159, 171, 178);
+$color-white: rgb(255, 255, 255);
+
+@mixin hover-background($color) {
+    background-color: $color;
+
+    &:hover {
+        background-color: lighten($color: $color, $amount: 5);
+    }
+}
+
+@mixin hover-image($image, $image-hover) {
+    background-image: $image;
+    background-size: cover;
+
+    &:hover {
+        background-image: $image-hover;
+    }
+}
