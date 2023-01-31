@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://www.frontendmentor.io/solutions/responsive-landing-page-made-with-html-and-sass-03Fg4X5ql8
-- Live Site URL: https://emanuelm45.github.io/clipboard-landing-page-master/
+- Live Site URL: https://emanuelm45.github.io/landing-page-clipboard/
 ## My process
 
 ### Built with
