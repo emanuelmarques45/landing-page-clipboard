@@ -27,18 +27,18 @@ Users should be able to:
 
 #### Desktop Layout
 
-![Desktop](https://github.com/emanuelm45/portfolio-images/blob/main/landing-page-clipboard/desktop.png)
+![Desktop](https://github.com/emanuelmarques45/portfolio-images/blob/main/landing-page-clipboard/desktop.png)
 
 #### Mobile Layout
 
 <p align="center">
-  <img src="https://github.com/emanuelm45/portfolio-images/blob/main/landing-page-clipboard/mobile.png">
+  <img src="https://github.com/emanuelmarques45/portfolio-images/blob/main/landing-page-clipboard/mobile.png">
 </p>
 
 ### Links
 
 - Solution URL: https://www.frontendmentor.io/solutions/responsive-landing-page-made-with-html-and-sass-03Fg4X5ql8
-- Live Site URL: https://emanuelm45.github.io/landing-page-clipboard/
+- Live Site URL: https://emanuelmarques45.github.io/landing-page-clipboard/
 ## My process
 
 ### Built with
